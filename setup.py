@@ -10,5 +10,5 @@ setup(name='cryptoaddress',
       author='peterr',
       author_email='coderiot@zoho.com',
       url='https://github.com/coderiot/cryptoaddress/',
-      packages=['cryptoaddress'],
+      packages=['address'],
 )
