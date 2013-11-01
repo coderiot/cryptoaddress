@@ -12,7 +12,7 @@
 
 ## Installation
 ```sh
-$ pip install -e git+https://github.com/coderiot/cryptoaddress.git#egg=cryptoaddress
+pip install -e git+https://github.com/coderiot/cryptoaddress.git#egg=cryptoaddress
 ```
 
 ## run tests
@@ -48,13 +48,14 @@ NMC NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ
 BTC 1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T
 ```
 
-### validate
+### validate public address
 ```python
 >>> import address
 >>> address.validate("1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T")
 True
 ```
 
+### validate private address
 ```python
 >>> import address
 >>> address.validate("5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS")
@@ -67,7 +68,6 @@ True
 False
 ```
 
-### convert
 ### convert BTC public address to LTC public address
 ```python
 >>> import address
