@@ -55,6 +55,8 @@ def from_hash160(h160, currency='btc', typ='pub', version=None):
     if all(c in string.hexdigits for c in h160):
         h160 = h160.decode('hex')
 
+    currency = currency.lower()
+
     if version is None:
         version = versions[currency][typ]
 
@@ -139,6 +141,7 @@ def convert(addr, to):
         raise Exception('Currency %s is unknown.' % to)
 
     det = detect(addr)
+    to = to.lower()
 
     h160 = to_hash160(addr)
     return from_hash160(h160, to, typ=det['type'])
