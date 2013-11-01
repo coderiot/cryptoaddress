@@ -21,6 +21,33 @@ python -m address.test -v
 ```
 
 ## Usage
+### generate address from RIPEMD-160 Hash (Default: BTC)
+```python
+>>> import address
+>>> address.from_hash160("c4c5d791fcb4654a1ef5e03fe0ad3d9c598f9827")
+'1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T'
+```
+### generate LTC address from RIPEMD-160 Hash
+```python
+>>> import address
+>>> address.from_hash160("c4c5d791fcb4654a1ef5e03fe0ad3d9c598f9827", currency='ltc')
+'1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T'
+```
+
+### generate all address types for one RIPEMD-160 Hash
+```python
+>>> import address
+>>> for curr in address.versions:
+...     print curr.upper(), address.from_hash160(h, currency=curr)
+PPC PSXcbszYpbauNj6WF4AE9SWYjLjZArBajH
+IXC xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ
+LTC LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq
+FTC 6wftERmjiCayqxNxErWAGJMHvfAt4RZZbn
+NVC 4XeGKmz1T7oiwMYS6LWFMYia9ddDoT6ajT
+NMC NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ
+BTC 1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T
+```
+
 ### validate
 ```python
 >>> import address
