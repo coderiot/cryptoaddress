@@ -35,10 +35,11 @@ def dhash(s):
     return hashlib.sha256(hashlib.sha256(s).digest()).digest()
 
 
-#def hash160(s):
-    #h = hashlib.new('ripemd160')
-    #h.update(hashlib.sha256(s).digest())
-    #return h.digest()
+def sha256hash160(s):
+    h = hashlib.new('ripemd160')
+    h.update(hashlib.sha256(s).digest())
+    return h.digest()
+
 
 def from_hash160(h160, currency='btc', typ='pub', version=None):
     """Create crypto currency address from hash160 digest.
@@ -145,3 +146,44 @@ def convert(addr, to):
 
     h160 = to_hash160(addr)
     return from_hash160(h160, to, typ=det['type'])
+
+
+def generate(currency='btc', secret=None, compressed=False):
+    """Generate address pair for currency. (Default: BTC)
+
+    :currency: string, 3 letter currency code
+    :secret: string, seed for private address
+    :compressed: bool, if key pair is on compresses format or not
+    :returns: dict, contain public and private address in hex and base58
+
+    """
+    import ecdsa
+    pair = {'priv': {}, 'pub': {}}
+    if secret:
+        h = hashlib.sha256(secret).hexdigest()
+        secret = int(h, 16)
+        sk = ecdsa.SigningKey.from_secret_exponent(secret, curve=ecdsa.SECP256k1)
+    else:
+        sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+    priv = sk.to_string()
+
+    pub = sk.get_verifying_key()
+    if compressed:
+        priv = sk.to_string() + '\x01'
+        pair['priv']['hex'] = priv.encode('hex')
+        if pub.pubkey.point.y() % 2:
+            pub = pub.to_string()
+            pub = '\x03' + pub[:32]
+        else:
+            pub = pub.to_string()
+            pub = '\x02' + pub[:32]
+    else:
+        pair['priv']['hex'] = priv.encode('hex')
+        pub = pub.to_string()
+        pub = '\x04' + pub
+
+    pair['pub']['hex'] = sha256hash160(pub).encode('hex')
+    pair['pub']['b58'] = from_hash160(pair['pub']['hex'], currency=currency)
+    pair['priv']['b58'] = from_hash160(pair['priv']['hex'], typ='priv', currency=currency)
+
+    return pair
