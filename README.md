@@ -9,6 +9,9 @@
  * NVC
  * FTC
 
+## Requirements
+
+ - [ecdsa](https://github.com/warner/python-ecdsa)
 
 ## Installation
 ```sh
