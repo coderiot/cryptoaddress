@@ -5,6 +5,8 @@ import hashlib
 
 import string
 
+from collections import namedtuple
+
 import base58
 
 
@@ -147,6 +149,8 @@ def convert(addr, to):
     h160 = to_hash160(addr)
     return from_hash160(h160, to, typ=det['type'])
 
+Key = namedtuple('Key', ['b58', 'hex'])
+
 
 def generate(currency='btc', secret=None, compressed=False):
     """Generate address pair for currency. (Default: BTC)
@@ -154,36 +158,37 @@ def generate(currency='btc', secret=None, compressed=False):
     :currency: string, 3 letter currency code
     :secret: string, seed for private address
     :compressed: bool, if key pair is on compresses format or not
-    :returns: dict, contain public and private address in hex and base58
+    :returns: tuple, (private_key, public_key) containing representation in hex and base58 format.
 
     """
-    import ecdsa
-    pair = {'priv': {}, 'pub': {}}
+    from ecdsa import SigningKey, SECP256k1
+
     if secret:
         h = hashlib.sha256(secret).hexdigest()
         secret = int(h, 16)
-        sk = ecdsa.SigningKey.from_secret_exponent(secret, curve=ecdsa.SECP256k1)
+        sk = SigningKey.from_secret_exponent(secret, curve=SECP256k1)
     else:
-        sk = ecdsa.SigningKey.generate(curve=ecdsa.SECP256k1)
+        sk = SigningKey.generate(curve=SECP256k1)
+
     priv = sk.to_string()
-
     pub = sk.get_verifying_key()
+
     if compressed:
-        priv = sk.to_string() + '\x01'
-        pair['priv']['hex'] = priv.encode('hex')
+        priv = priv + '\x01'
+
         if pub.pubkey.point.y() % 2:
-            pub = pub.to_string()
-            pub = '\x03' + pub[:32]
+            prefix = '\x03'
         else:
-            pub = pub.to_string()
-            pub = '\x02' + pub[:32]
+            prefix = '\x02'
     else:
-        pair['priv']['hex'] = priv.encode('hex')
-        pub = pub.to_string()
-        pub = '\x04' + pub
+        prefix = '\x04'
 
-    pair['pub']['hex'] = sha256hash160(pub).encode('hex')
-    pair['pub']['b58'] = from_hash160(pair['pub']['hex'], currency=currency)
-    pair['priv']['b58'] = from_hash160(pair['priv']['hex'], typ='priv', currency=currency)
+    pub = prefix + pub.to_string()
 
-    return pair
+    priv_hex = priv.encode('hex')
+    priv_b58 = from_hash160(priv_hex, typ='priv', currency=currency)
+
+    pub_hex = sha256hash160(pub).encode('hex')
+    pub_b58 = from_hash160(pub_hex, currency=currency)
+
+    return Key(hex=priv_hex, b58=priv_b58), Key(hex=pub_hex, b58=pub_b58)
