@@ -1,4 +1,4 @@
-*cryptoaddress* - validate, convert and detect addresses from different crypto currencies.
+*cryptoaddress* - generate, validate, convert and detect addresses from different crypto currencies.
 
 ## Currencies
  * BTC
