@@ -60,11 +60,11 @@ def from_hash160(h160, currency='btc', typ='pub', version=None):
 
     currency = currency.lower()
 
-    if version is None:
-        version = versions[currency][typ]
-
     if currency not in versions.keys():
         raise Exception('Currency %s is unknown.' % currency)
+
+    if version is None:
+        version = versions[currency][typ]
 
     h160 = chr(version) + h160
     h = dhash(h160)
@@ -165,8 +165,8 @@ def generate(currency='btc', secret=None, compressed=False):
 
     if secret:
         h = hashlib.sha256(secret).hexdigest()
-        secret = int(h, 16)
-        sk = SigningKey.from_secret_exponent(secret, curve=SECP256k1)
+        secret_exp = int(h, 16)
+        sk = SigningKey.from_secret_exponent(secret_exp, curve=SECP256k1)
     else:
         sk = SigningKey.generate(curve=SECP256k1)
 
@@ -175,15 +175,13 @@ def generate(currency='btc', secret=None, compressed=False):
 
     if compressed:
         priv = priv + '\x01'
-
         if pub.pubkey.point.y() % 2:
             prefix = '\x03'
         else:
             prefix = '\x02'
+        pub = prefix + pub.to_string()[0:32]
     else:
-        prefix = '\x04'
-
-    pub = prefix + pub.to_string()
+        pub = '\x04' + pub.to_string()
 
     priv_hex = priv.encode('hex')
     priv_b58 = from_hash160(priv_hex, typ='priv', currency=currency)
