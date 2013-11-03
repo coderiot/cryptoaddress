@@ -24,6 +24,33 @@ python -m address.test -v
 ```
 
 ## Usage
+### generate new address for currency
+```python
+>>> priv, pub = address.generate(currency='btc')
+>>> priv.b58
+'5JoDLL3VW3YyxKywCiZRa9RA5ByPvNrnpc6rYG5FudXeoZGCHvK'
+>>> pub.b58
+'125WvPrXRBnBZBinhhyB3K3FALxgzGNDTQ'
+```
+
+### generate new compressed address
+```python
+>>> priv, pub = address.generate(currency='btc', compressed=True)
+>>> priv.b58
+'L53Mzz8SspiSqwvsPdyPf2Zo2c5qHVzco4geb6qXXfnvMyFLXgfy'
+>>> pub.b58
+'1Eu6g6PyojgqgWuyngpPyX1MkA4WMyzLJ1'
+```
+
+### generate new address by secret
+```python
+>>> priv, pub = address.generate(currency='btc', secret='hello')
+>>> priv.b58
+'5JA5gN4G78DhFSW4jr28vjb8JEX5UhVMZB16Jr6MjDGaeguJEvm'
+>>> pub.b58
+'1HoSFymoqteYrmmr7s3jDDqmggoxacbk37'
+```
+
 ### generate address from RIPEMD-160 Hash (Default: BTC)
 ```python
 >>> import address
