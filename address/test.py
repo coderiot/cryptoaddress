@@ -183,6 +183,33 @@ class Base58Test(unittest.TestCase):
         self.assertRaises(Exception, base58.b58decode, '0')
         self.assertRaises(Exception, base58.b58decode, 'l')
 
+class GenerateAddressTest(unittest.TestCase):
+    def setUp(self):
+        self.secret = 'hello'
+        self.secret_pub_hex = 'b84a3b37524e049979df3b4e715cac485385d400'
+        self.secret_compr_hex = 'e3dd7e774a1272aeddb18efdc4baf6e14990edaa'
+        self.secret_priv_hex = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
+        self.secret_compr_priv_hex = '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b982401'
+
+        self.secret2 = 'hellow'
+        self.secret2_compr_hex = 'b980c68e635aa6f2a10f7cd2e4f36a48c8bb7eb2'
+        self.secret2_compr_priv_hex = 'd0bc381952d0827f36467818a9560eb5eb6fda8a64a422aa21fcda3f2263e8b401'
+
+    def test_with_secret(self):
+        priv, pub = address.generate(secret=self.secret)
+        self.assertEqual(pub.hex, self.secret_pub_hex)
+        self.assertEqual(priv.hex, self.secret_priv_hex)
+
+    def test_compressed_with_secret(self):
+        priv, pub = address.generate(secret=self.secret, compressed=True)
+        self.assertEqual(pub.hex, self.secret_compr_hex)
+        self.assertEqual(priv.hex, self.secret_compr_priv_hex)
+
+    def test_compressed_with_secret2(self):
+        priv, pub = address.generate(secret=self.secret2, compressed=True)
+        self.assertEqual(pub.hex, self.secret2_compr_hex)
+        self.assertEqual(priv.hex, self.secret2_compr_priv_hex)
+
 if __name__ == '__main__':
     #find_version()
     unittest.main()
