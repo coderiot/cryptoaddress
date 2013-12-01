@@ -24,6 +24,12 @@ versions = {'btc': {'pub': 0,
                     'priv': 136},
             'ftc': {'pub': 14,
                     'priv': 142},
+            'gdc': {'pub': 97,
+                    'priv': 225},
+            'tag': {'pub': 65,
+                    'priv': 193},
+            'dgc': {'pub': 30,
+                    'priv': 158},
            }
 
 
