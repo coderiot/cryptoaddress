@@ -38,6 +38,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 201},
             'xpm': {'pub': 23,
                     'priv': 151},
+            'qrk': {'pub': 58,
+                    'priv': 128},
            }
 
 
