@@ -82,6 +82,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 175},
             'frc': {'pub': 35,
                     'priv': 163},
+            'krc': {'pub': 79,
+                    'priv': 207},
            }
 
 
