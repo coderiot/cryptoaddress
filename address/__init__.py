@@ -66,6 +66,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 230},
             'col': {'pub': 2,
                     'priv': 130},
+            'tix': {'pub': 19,
+                    'priv': 147},
            }
 
 
