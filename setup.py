@@ -10,6 +10,6 @@ setup(name='cryptoaddress',
     author='peterr',
     author_email='coderiot@zoho.com',
     url='https://github.com/coderiot/cryptoaddress/',
-    install_requires=['ecdsa >= 0.10']
+    install_requires=['ecdsa >= 0.10'],
     packages=['address'],
 )
