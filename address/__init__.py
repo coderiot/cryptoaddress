@@ -70,6 +70,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 147},
             'cnc': {'pub': 28,
                     'priv': 156},
+            'yac': {'pub': 77,
+                    'priv': 205},
            }
 
 
