@@ -4,7 +4,7 @@
 from distutils.core import setup
 
 setup(name='cryptoaddress',
-    version='0.1.1',
+    version='0.1.5',
     license='GPL',
     description='generate, validate, convert and detect addresses from different crypto currencies.',
     author='peterr',
