@@ -8,6 +8,36 @@
  * IXC
  * NVC
  * FTC
+ * GDC
+ * TAG
+ * DGC
+ * ZET
+ * XJO
+ * WDC
+ * XPM
+ * QRK
+ * PTS
+ * MEC
+ * FRC
+ * TRC
+ * BQC
+ * ANC
+ * I0C
+ * SBC
+ * BTB
+ * MNC
+ * BTE
+ * IFC
+ * COL
+ * TIX
+ * CNC
+ * YAC
+ * DTC
+ * ZCC
+ * CENT
+ * LKY
+ * FRC
+ * KRC
 
 ## Requirements
 
