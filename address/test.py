@@ -53,6 +53,7 @@ pubs = {'btc': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
         'clr': 'CaQL1wwmej5FJ2LAajAd44AJjin5zEqXBK',
         'cgb': '5jf5H6ssafCMPexhAbWCovXw39Q3ryw5ic',
         'nec': 'NdrQdfPyQEf9jrpLCDVbBBxyULDfhhus4A',
+        'emd': 'EzRwvbjVuorWCdAgjFAXxoo2WkKkEtGjmZ',
 }
 priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'ltc': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi',
@@ -101,6 +102,7 @@ priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'clr': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'cgb': '5gh7pLce23GFc9Ths88NUvs6GVdWuSYvqJ34cGcMuXA6nPooqdc',
         'nec': '76LPE5TyoufmGbsKwUCLYQ3cjHVgD1wht91arZW1f3SPWT7Gohc',
+        'emd': '6TQEsfwNcppTi1pviTQMRJeuL7o2rdw4vzfYDiRymbK28i6LvCx',
 }
 
 
