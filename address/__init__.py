@@ -172,7 +172,7 @@ def detect(addr):
     """Detect the currency type of an address.
 
     :addr: string, cryptocurrency address
-    :returns: dict with name of currency and type public or private.
+    :returns: list of dicts with name of currency and type public or private.
 
     """
     # check for valid address
@@ -180,16 +180,19 @@ def detect(addr):
         raise Exception('Invalid address.')
 
     version = ord(base58.b58decode(addr)[0])
-    res = {'currency': None, 'type': None}
+    det = []
     for c, p in versions.items():
+        res = {'currency': None, 'type': None}
         if p['pub'] == version:
             res['currency'] = c
             res['type'] = 'pub'
+            det.append(res)
         elif p['priv'] == version:
             res['currency'] = c
             res['type'] = 'priv'
+            det.append(res)
 
-    return res
+    return det
 
 
 def convert(addr, to):
@@ -203,11 +206,12 @@ def convert(addr, to):
     if to not in versions.keys():
         raise Exception('Currency %s is unknown.' % to)
 
-    det = detect(addr)
+    det = detect(addr)[0]
     to = to.lower()
 
     h160 = to_hash160(addr)
     return from_hash160(h160, to, typ=det['type'])
+
 
 Key = namedtuple('Key', ['b58', 'hex'])
 
