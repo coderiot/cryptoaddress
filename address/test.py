@@ -95,6 +95,7 @@ priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'yac': '7tzFTeEkG7uCWHpFhP6KS6SCi2GuovAimUiAiA1XWmbhMP6scZ1',
 }
 
+
 def find_version():
     priv = "c4bbcb1fbec99d65bf59d85c8cb62ee2db963f0fe106f483d9afa73bd4e39a8a"
     pub = "c4c5d791fcb4654a1ef5e03fe0ad3d9c598f9827"
@@ -138,26 +139,7 @@ def find_version():
 
 class ValidAddressTest(unittest.TestCase):
     def setUp(self):
-        #self.pubs = ['1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',  # btc
-                     #'1AGNa15ZQXAZUgFiqJ2i7Z2DPU2J6hW62i',  # btc
-                     #'LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq',  # ltc
-                     #'NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ',  # nmc
-                     #'PSXcbszYpbauNj6WF4AE9SWYjLjZArBajH',  # ppc
-                     #'xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ',  # ixc
-                     #'4XeGKmz1T7oiwMYS6LWFMYia9ddDoT6ajT',  # nvc
-                     #'6wftERmjiCayqxNxErWAGJMHvfAt4RZZbn',  # ftc
-                     #]
         self.pubs = [a for _, a in pubs.items()]
-
-        #self.priv = ['5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
-                     #'6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi',
-                     #'74Pe3r1wxUzY8nHd2taLb5SqpAsxZK6q6VwUcQp7fPS11tYZd9P',
-                     #'7ADsaYN3Wm2DYF2jkdSLT3FAZWj7WRdTTR9oLrsoeMTAVgq1Mho',
-                     #'Mw64RiX6A23DKVivM4USZXC8nBt3bqyKquB8wsifzJ589JYYDF',
-                     #'5artHeGYTmEaCgib9PGNcy4mX9nMxL2JUNpjspYfvZ8wJWQjuBJ',
-                     #'5nXMM2xjaKHw1cCparzNLtfR1qUfrZ5ZCDFPLig3tVBGGBK2QwG',
-                    #]
-
         self.priv = [a for k, v in priv.items()]
 
     def test_pub_validate(self):
@@ -198,36 +180,37 @@ class ConvertAddressTest(unittest.TestCase):
 
 class DetectAddressTest(unittest.TestCase):
     def setUp(self):
-        self.addrs = {'btc': {'pub': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
-                             'priv': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS'},
-                     'ltc': {'pub': 'LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq',
-                             'priv': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi'},  # ltc
-                     'nmc': {'pub': 'NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ',
-                             'priv': '74Pe3r1wxUzY8nHd2taLb5SqpAsxZK6q6VwUcQp7fPS11tYZd9P'},  # nmc
-                     'ppc': {'pub': 'PSXcbszYpbauNj6WF4AE9SWYjLjZArBajH',
-                             'priv': '7ADsaYN3Wm2DYF2jkdSLT3FAZWj7WRdTTR9oLrsoeMTAVgq1Mho'},  # ppc
-                     'ixc': {'pub': 'xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ',
-                             'priv': 'Mw64RiX6A23DKVivM4USZXC8nBt3bqyKquB8wsifzJ589JYYDF'},  # ixc
-                     'nvc': {'pub': '4XeGKmz1T7oiwMYS6LWFMYia9ddDoT6ajT',
-                             'priv': '5artHeGYTmEaCgib9PGNcy4mX9nMxL2JUNpjspYfvZ8wJWQjuBJ'},  # nvc
-                     'ftc': {'pub': '6wftERmjiCayqxNxErWAGJMHvfAt4RZZbn',
-                             'priv': '5nXMM2xjaKHw1cCparzNLtfR1qUfrZ5ZCDFPLig3tVBGGBK2QwG'},  # ftc
-                     }
+        #self.addrs = {'btc': {'pub': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
+                             #'priv': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS'},
+                     #'ltc': {'pub': 'LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq',
+                             #'priv': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi'},  # ltc
+                     #'nmc': {'pub': 'NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ',
+                             #'priv': '74Pe3r1wxUzY8nHd2taLb5SqpAsxZK6q6VwUcQp7fPS11tYZd9P'},  # nmc
+                     #'ppc': {'pub': 'PSXcbszYpbauNj6WF4AE9SWYjLjZArBajH',
+                             #'priv': '7ADsaYN3Wm2DYF2jkdSLT3FAZWj7WRdTTR9oLrsoeMTAVgq1Mho'},  # ppc
+                     #'ixc': {'pub': 'xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ',
+                             #'priv': 'Mw64RiX6A23DKVivM4USZXC8nBt3bqyKquB8wsifzJ589JYYDF'},  # ixc
+                     #'nvc': {'pub': '4XeGKmz1T7oiwMYS6LWFMYia9ddDoT6ajT',
+                             #'priv': '5artHeGYTmEaCgib9PGNcy4mX9nMxL2JUNpjspYfvZ8wJWQjuBJ'},  # nvc
+                     #'ftc': {'pub': '6wftERmjiCayqxNxErWAGJMHvfAt4RZZbn',
+                             #'priv': '5nXMM2xjaKHw1cCparzNLtfR1qUfrZ5ZCDFPLig3tVBGGBK2QwG'},  # ftc
+                     #}
         self.addrs = {}
         for k, a in pubs.items():
             self.addrs[k] = {'pub': a}
 
         for k, a in priv.items():
-            self.addrs[k] = {'priv': a}
-    #def test_detect(self):
-        #pass
-        #for curr, addrs in self.addrs.items():
-            #pub_det = address.detect(addrs['pub'])
-            #self.assertEqual(curr, pub_det['currency'])
-            #self.assertEqual('pub', pub_det['type'])
-            #pub_det = address.detect(addrs['priv'])
-            #self.assertEqual(curr, pub_det['currency'])
-            #self.assertEqual('priv', pub_det['type'])
+            self.addrs[k]['priv'] = a
+
+    def test_detect(self):
+        for curr, addrs in self.addrs.items():
+            pub_det = address.detect(addrs['pub'])
+            self.assertIn(curr, [d['currency'] for d in pub_det])
+            self.assertIn('pub', [d['type'] for d in pub_det if d['currency'] == curr])
+
+            priv_det = address.detect(addrs['priv'])
+            self.assertIn(curr, [d['currency'] for d in priv_det])
+            self.assertIn('priv', [d['type'] for d in priv_det if d['currency'] == curr])
 
 
 class Hash160Test(unittest.TestCase):
@@ -264,6 +247,7 @@ class Base58Test(unittest.TestCase):
         self.assertRaises(Exception, base58.b58decode, 'O')
         self.assertRaises(Exception, base58.b58decode, '0')
         self.assertRaises(Exception, base58.b58decode, 'l')
+
 
 class GenerateAddressTest(unittest.TestCase):
     def setUp(self):
