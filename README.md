@@ -38,6 +38,14 @@
  * LKY
  * FRC
  * KRC
+ * FST
+ * CLR
+ * CGB
+ * NEC
+ * EMD
+ * ADT
+ * NET
+
 
 ## Requirements
 
