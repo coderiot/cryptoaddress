@@ -100,6 +100,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 240},
             'dvc': {'pub': 0,
                     'priv': 128},
+            'bet': {'pub': 25,
+                    'priv': 143},
            }
 
 
