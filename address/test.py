@@ -61,6 +61,7 @@ pubs = {'btc': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
         'osc': '27ceR8CHC32U2khuwpWLSo5rNc5ZWKC247',
         'tek': 'Bmj83jMCEN9VfA3zXtVz5ocjUiGCYu2FKE',
         'dem': 'NdrQdfPyQEf9jrpLCDVbBBxyULDfhhus4A',
+        'uno': 'ucsrT2MA58LciEZ15X98WqvYwB4JVaGzxN',
 }
 priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'ltc': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi',
@@ -117,6 +118,7 @@ priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'osc': '5PCREFaMMDBDPmEMhuYNu3U82U6446y3kYQ6QvRHxd6cLkgsEfx',
         'tek': '6XHjE8qSKgAuyezLXceMKwrTAM2UA3cpWGoki1omkuKo7uqracS',
         'dem': '76LPE5TyoufmGbsKwUCLYQ3cjHVgD1wht91arZW1f3SPWT7Gohc',
+        'uno': '8XvPp3mMTCkW4srevPtJZBpv7ByZAJBMid4DM15ZQDj4jGYEcFe',
 }
 
 
@@ -194,7 +196,7 @@ class ConvertAddressTest(unittest.TestCase):
     def test_all_priv_convert(self):
         for k1 in self.priv:
             for k2 in self.priv:
-                addr = address.convert(self.priv[k1], k2)
+                addr = address.convert(self.priv[k1], k2, typ='priv')
                 self.assertEqual(self.priv[k2], addr,
                                  msg="%s != %s in conversion from %s to %s" % (self.pubs[k2], addr, k1, k2))
 

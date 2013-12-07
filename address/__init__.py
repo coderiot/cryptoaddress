@@ -108,6 +108,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 164},
             'dem': {'pub': 53,
                     'priv': 181},
+            'uno': {'pub': 130,
+                    'priv': 224},
            }
 
 
@@ -219,22 +221,20 @@ def detect(addr):
     return det
 
 
-def convert(addr, to):
+def convert(addr, to, typ='pub'):
     """Convert crypto currency address to another.
 
     :addr: string, base58 encoded address
     :to: string, currency code
+    :typ: string, address type: priv or pub
     :returns: string, base58 encoded address for new currency
 
     """
     if to not in versions.keys():
         raise Exception('Currency %s is unknown.' % to)
 
-    det = detect(addr)[0]
-    to = to.lower()
-
     h160 = to_hash160(addr)
-    return from_hash160(h160, to, typ=det['type'])
+    return from_hash160(h160, to, typ=typ)
 
 
 Key = namedtuple('Key', ['b58', 'hex'])
