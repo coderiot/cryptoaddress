@@ -63,6 +63,7 @@ pubs = {'btc': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
         'dem': 'NdrQdfPyQEf9jrpLCDVbBBxyULDfhhus4A',
         'uno': 'ucsrT2MA58LciEZ15X98WqvYwB4JVaGzxN',
         'tgc': 'tQs3VhTHwawzFw8k1G9B4U7C3fHUJeaWXn',
+        'ixc': 'xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ',
 }
 priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'ltc': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi',
@@ -121,6 +122,7 @@ priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'dem': '76LPE5TyoufmGbsKwUCLYQ3cjHVgD1wht91arZW1f3SPWT7Gohc',
         'uno': '8XvPp3mMTCkW4srevPtJZBpv7ByZAJBMid4DM15ZQDj4jGYEcFe',
         'tgc': '8XvPp3mMTCkW4srevPtJZBpv7ByZAJBMid4DM15ZQDj4jGYEcFe',
+        'ixc': 'Mw64RiX6A23DKVivM4USZXC8nBt3bqyKquB8wsifzJ589JYYDF',
 }
 
 
@@ -208,21 +210,6 @@ class ConvertAddressTest(unittest.TestCase):
 
 class DetectAddressTest(unittest.TestCase):
     def setUp(self):
-        #self.addrs = {'btc': {'pub': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
-                             #'priv': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS'},
-                     #'ltc': {'pub': 'LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq',
-                             #'priv': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi'},  # ltc
-                     #'nmc': {'pub': 'NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ',
-                             #'priv': '74Pe3r1wxUzY8nHd2taLb5SqpAsxZK6q6VwUcQp7fPS11tYZd9P'},  # nmc
-                     #'ppc': {'pub': 'PSXcbszYpbauNj6WF4AE9SWYjLjZArBajH',
-                             #'priv': '7ADsaYN3Wm2DYF2jkdSLT3FAZWj7WRdTTR9oLrsoeMTAVgq1Mho'},  # ppc
-                     #'ixc': {'pub': 'xqagKtjTka3dFhfhGsogPr6qyD7rAzGQKQ',
-                             #'priv': 'Mw64RiX6A23DKVivM4USZXC8nBt3bqyKquB8wsifzJ589JYYDF'},  # ixc
-                     #'nvc': {'pub': '4XeGKmz1T7oiwMYS6LWFMYia9ddDoT6ajT',
-                             #'priv': '5artHeGYTmEaCgib9PGNcy4mX9nMxL2JUNpjspYfvZ8wJWQjuBJ'},  # nvc
-                     #'ftc': {'pub': '6wftERmjiCayqxNxErWAGJMHvfAt4RZZbn',
-                             #'priv': '5nXMM2xjaKHw1cCparzNLtfR1qUfrZ5ZCDFPLig3tVBGGBK2QwG'},  # ftc
-                     #}
         self.addrs = {}
         for k, a in pubs.items():
             self.addrs[k] = {'pub': a}
