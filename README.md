@@ -145,7 +145,7 @@ False
 ### convert BTC private address to LTC private address
 ```python
 >>> import address
->>> address.convert('5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS', to='ltc')
+>>> address.convert('5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS', to='ltc', typ='priv')
 '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi'
 ```
 
@@ -153,7 +153,14 @@ False
 ```python
 >>> import address
 >>> address.detect('5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS')
-{'currency': 'btc', 'type': 'priv'}
+[{'currency': 'qrk', 'type': 'priv'},
+ {'currency': 'clr', 'type': 'priv'},
+ {'currency': 'i0c', 'type': 'priv'},
+ {'currency': 'trc', 'type': 'priv'},
+ {'currency': 'bte', 'type': 'priv'},
+ {'currency': 'btc', 'type': 'priv'},
+ {'currency': 'dvc', 'type': 'priv'}]
+
 ```
 
 ```python
