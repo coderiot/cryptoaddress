@@ -45,7 +45,22 @@
  * EMD
  * ADT
  * NET
-
+ * DVC
+ * BET
+ * OSC
+ * TEK
+ * DEM
+ * UNO
+ * TGC
+ * IXC
+ * ASC
+ * CIN
+ * NRB
+ * SPT
+ * NAN
+ * REC
+ * ORB
+ * XEN
 
 ## Requirements
 
