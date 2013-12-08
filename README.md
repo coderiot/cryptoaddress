@@ -61,6 +61,7 @@
  * REC
  * ORB
  * XEN
+ * CAP
 
 ## Requirements
 
