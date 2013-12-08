@@ -124,6 +124,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 178},
             'nan': {'pub': 51,
                     'priv': 179},
+            'rec': {'pub': 60,
+                    'priv': 188},
            }
 
 
