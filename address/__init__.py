@@ -158,6 +158,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 155},
             'pxc': {'pub': 56,
                     'priv': 184},
+            'flo': {'pub': 35,
+                    'priv': 163},
            }
 
 
