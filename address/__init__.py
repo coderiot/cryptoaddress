@@ -152,6 +152,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 149},
             'alf': {'pub': 82,
                     'priv': 210},
+            'csc': {'pub': 28,
+                    'priv': 156},
            }
 
 
