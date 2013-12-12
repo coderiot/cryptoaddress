@@ -172,6 +172,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 220},
             'btg': {'pub': 98,
                     'priv': 226},
+            'dbl': {'pub': 24,
+                    'priv': 152},
            }
 
 
