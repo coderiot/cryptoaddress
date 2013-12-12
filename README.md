@@ -84,6 +84,7 @@
  * BTG
  * DBL
  * ELC
+ * EZC
 
 ## Requirements
 
