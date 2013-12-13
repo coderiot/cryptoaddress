@@ -88,6 +88,7 @@
  * LK7
  * RYC
  * SXC
+ * PYC
 
 ## Requirements
 
