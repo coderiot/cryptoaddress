@@ -188,6 +188,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 190},
             'pyc': {'pub': 55,
                     'priv': 183},
+            'doge': {'pub': 30,
+                    'priv': 158},
            }
 
 

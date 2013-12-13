@@ -89,6 +89,7 @@
  * RYC
  * SXC
  * PYC
+ * DOGE
 
 ## Requirements
 
