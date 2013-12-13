@@ -87,6 +87,7 @@
  * EZC
  * LK7
  * RYC
+ * SXC
 
 ## Requirements
 
