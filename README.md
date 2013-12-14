@@ -90,6 +90,7 @@
  * SXC
  * PYC
  * DOGE
+ * AMC
 
 ## Requirements
 
