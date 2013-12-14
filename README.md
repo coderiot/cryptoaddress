@@ -92,6 +92,7 @@
  * DOGE
  * AMC
  * GLD
+ * GME
 
 ## Requirements
 
