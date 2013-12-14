@@ -91,6 +91,7 @@
  * PYC
  * DOGE
  * AMC
+ * GLD
 
 ## Requirements
 
