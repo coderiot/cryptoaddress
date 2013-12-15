@@ -198,6 +198,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 166},
             'mem': {'pub': 42,
                     'priv': 170},
+            'jkc': {'pub': 16,
+                    'priv': 146},
            }
 
 

@@ -94,6 +94,7 @@
  * GLD
  * GME
  * MEM
+ * JKC
 
 ## Requirements
 
