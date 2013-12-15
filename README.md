@@ -93,6 +93,7 @@
  * AMC
  * GLD
  * GME
+ * MEM
 
 ## Requirements
 

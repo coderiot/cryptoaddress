@@ -196,6 +196,8 @@ versions = {'btc': {'pub': 0,
                     'priv': 160},
             'gme': {'pub': 38,
                     'priv': 166},
+            'mem': {'pub': 42,
+                    'priv': 170},
            }
 
 
