@@ -6,6 +6,7 @@ import unittest
 import address
 import base58
 
+# secret: correct horse battery staple
 pubs = {'btc': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
         'ltc': 'LdAPi7uXrLLmeh7u57pzkZc3KovxEDYRJq',
         'nmc': 'NEWoeZ6gh4CGvRgFAoAGh4hBqpxizGT6gZ',
@@ -106,6 +107,7 @@ pubs = {'btc': '1JwSSubhmg6iPtRjtyqhUYYH7bZg3Lfy1T',
         'gme': 'GbnMs2vekXi1UMj2pvVouJtB2mMX7gjtWG',
         'mem': 'JD8moU7obFZWk6HNvbq5qoyKYnPHuSCdHx',
         'jkc': '7kM6CeNK8ZWjUpf8HhAoEYtsBfgmSJxBai',
+        'tea': 'TsFFS5GidagYNVdTWfpjUpWCetZvxoP7wH',
 }
 priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'ltc': '6vcfLvDpYnHdbVxoQa6Lmo3k9iR5xVjKwwf3dp4XgmQT3QJywYi',
@@ -207,6 +209,7 @@ priv = {'btc': '5KJvsngHeMpm884wtkJNzQGaCErckhHJBGFsvd3VyK5qMZXj3hS',
         'gme': '6bBDabjW2XXNFJ9kLmtMEb3zzaFuTTJa5YwyCKBZkDLa7863JsK',
         'mem': '6ixCHXXdSEEGnaUZy6NM3sT6f2in4Gg5E7EQAuw9iqN85eUNVK8',
         'jkc': '5vJL3xkrz1zqYtXeDBUNAB4WgHwYTNT4LmXpKKRds7CpEhQ9rE7',
+        'tea': '8XvPp3mMTCkW4srevPtJZBpv7ByZAJBMid4DM15ZQDj4jGYEcFe',
 }
 
 
