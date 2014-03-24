@@ -4,6 +4,7 @@ cryptoaddress
 generate, validate, convert and detect addresses from different crypto currencies.
 
 ## Currencies
+| ![](https://raw.githubusercontent.com/bitcoin/bitcoin/master/share/pixmaps/bitcoin32.png) <br/> BTC  | ![](https://raw.githubusercontent.com/litecoin-project/litecoin/master-0.8/share/pixmaps/bitcoin32.png) <br/> LTC  | <br/> NMC  | <br/> PPC |
 |      |      |      |     |
 |------|------|------|-----|
 | BTC  | LTC  | NMC  | PPC |
