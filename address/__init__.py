@@ -106,6 +106,7 @@ versions = {'btc':  {'pub': 0,   'priv': 128},
             'mem':  {'pub': 42,  'priv': 170},
             'jkc':  {'pub': 16,  'priv': 146},
             'tea':  {'pub': 66,  'priv': 224},
+            'vtc':  {'pub': 71,  'priv': 199},
            }
 
 
