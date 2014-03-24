@@ -4,99 +4,33 @@ cryptoaddress
 generate, validate, convert and detect addresses from different crypto currencies.
 
 ## Currencies
- | BTC | LTC | NMC | PPC |
- |-----------------------|
- | IXC | NVC | FTC | GDC |
-
- * TAG
- * DGC
- * ZET
- * XJO
- * WDC
- * XPM
- * QRK
- * PTS
- * MEC
- * FRC
- * TRC
- * BQC
- * ANC
- * I0C
- * SBC
- * BTB
- * MNC
- * BTE
- * IFC
- * COL
- * TIX
- * CNC
- * YAC
- * DTC
- * ZCC
- * CENT
- * LKY
- * FRC
- * KRC
- * FST
- * CLR
- * CGB
- * NEC
- * EMD
- * ADT
- * NET
- * DVC
- * BET
- * OSC
- * TEK
- * DEM
- * UNO
- * TGC
- * IXC
- * ASC
- * CIN
- * NRB
- * SPT
- * NAN
- * REC
- * ORB
- * XEN
- * CAP
- * HBN
- * SRC
- * GLX
- * DMD
- * BOC
- * EXC
- * GRW
- * GLC
- * PHS
- * ALF
- * CSC
- * CMC
- * PXC
- * FLO
- * ARG
- * CRC
- * BUK
- * RED
- * ELP
- * BTG
- * DBL
- * ELC
- * EZC
- * LK7
- * RYC
- * SXC
- * PYC
- * DOGE
- * AMC
- * GLD
- * GME
- * MEM
- * JKC
- * TEA
- * VTC
- * MMC
+|      |      |      |     |
+|------|------|------|-----|
+| BTC  | LTC  | NMC  | PPC |
+| IXC  | NVC  | FTC  | GDC |
+| TAG  | DGC  | ZET  | XJO |
+| WDC  | XPM  | QRK  | PTS |
+| MEC  | FRC  | TRC  | BQC |
+| ANC  | I0C  | SBC  | BTB |
+| MNC  | BTE  | IFC  | COL |
+| TIX  | CNC  | YAC  | DTC |
+| ZCC  | CENT | LKY  | FRC |
+| KRC  | FST  | CLR  | CGB |
+| NEC  | EMD  | ADT  | NET |
+| DVC  | BET  | OSC  | TEK |
+| DEM  | UNO  | TGC  | IXC |
+| ASC  | CIN  | NRB  | SPT |
+| NAN  | REC  | ORB  | XEN |
+| CAP  | HBN  | SRC  | GLX |
+| DMD  | BOC  | EXC  | GRW |
+| GLC  | PHS  | ALF  | CSC |
+| CMC  | PXC  | FLO  | ARG |
+| CRC  | BUK  | RED  | ELP |
+| BTG  | DBL  | ELC  | EZC |
+| LK7  | RYC  | SXC  | PYC |
+| DOGE | AMC  | GLD  | GME |
+| MEM  | JKC  | TEA  | VTC |
+| MMC  |      |      |     |
 
 ## Requirements
 
