@@ -4,14 +4,10 @@ cryptoaddress
 generate, validate, convert and detect addresses from different crypto currencies.
 
 ## Currencies
- |     |     |     |     |
- |-----------------------|
  | BTC | LTC | NMC | PPC |
- 
- * IXC
- * NVC
- * FTC
- * GDC
+ |-----------------------|
+ | IXC | NVC | FTC | GDC |
+
  * TAG
  * DGC
  * ZET
